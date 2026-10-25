@@ -1,0 +1,25 @@
+{
+  "name": "memeriaw-fullstack-portfolio",
+  "version": "1.0.0",
+  "description": "Full-Stack Portfolio for Memeriaw Adugnaw (React + Node.js + Express + MongoDB)",
+  "private": true,
+  "scripts": {
+    "dev": "npm run start:all",
+    "start:all": "npx concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "backend": "npm --prefix backend run dev",
+    "frontend": "npm --prefix frontend run dev",
+    "seed": "npm --prefix backend run seed",
+    "test:backend": "npm --prefix backend test",
+    "build:frontend": "npm --prefix frontend run build"
+  },
+  "keywords": [
+    "portfolio",
+    "full-stack",
+    "react",
+    "nodejs",
+    "mongodb",
+    "express"
+  ],
+  "author": "Memeriaw Adugnaw",
+  "license": "MIT"
+}
