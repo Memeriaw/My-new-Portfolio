@@ -90,10 +90,11 @@ const ProjectSchema = new mongoose.Schema(
 );
 
 // Auto-populate id and slug before validation if missing
-ProjectSchema.pre('validate', function (next) {
+ProjectSchema.pre('validate', function () {
   if (!this.id) {
     this.id = `project-${Date.now()}`;
   }
+
   if (!this.slug && this.title) {
     this.slug = this.title
       .toLowerCase()
@@ -102,7 +103,6 @@ ProjectSchema.pre('validate', function (next) {
       .replace(/[\s_-]+/g, '-')
       .replace(/^-+|-+$/g, '');
   }
-  next();
 });
 
 module.exports = mongoose.model('Project', ProjectSchema);

@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 
 const MessageSchema = new mongoose.Schema(
@@ -70,11 +71,10 @@ const MessageSchema = new mongoose.Schema(
   }
 );
 
-MessageSchema.pre('validate', function (next) {
+MessageSchema.pre('validate', function () {
   if (!this.id) {
     this.id = `msg-${Date.now()}`;
   }
-  next();
 });
 
 module.exports = mongoose.model('Message', MessageSchema);
