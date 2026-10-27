@@ -1,6 +1,6 @@
 export const initialProfile = {
   name: "Memeriaw Adugnaw",
-  title: "Final-Year Information Systems Student",
+  title: "Fullstack and Short Form Video Editor",
   subtitle: "Building practical digital solutions through software development, database systems, and user-focused web applications.",
   bio: "Final-year Information Systems student at Bahir Dar University, passionate about software development, database systems, and building technology that solves real-world problems. I am developing my skills in modern web technologies, system design, and user-centered digital solutions.",
   photoUrl: "/images/profile.jpg",
